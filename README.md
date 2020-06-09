@@ -70,6 +70,7 @@
         <th>baseline+4.69%</th>
     </tr>   
 </table>
+
 ## 代码环境及依赖
 
 + OS: Ubuntu16.10
@@ -112,7 +113,7 @@
 
         ./tools/dist_train.sh configs/underwater/cas_x101/cascade_rcnn_x101_64x4d_fpn_1x.py 4
         
-        (上面的4是我的gpu数量，请自行修改)
+        (上面的4是我的gpu数量，请自行修改,另外根据config对应文件目录进行修改)
 
    	2. 训练过程文件及最终权重文件均保存在config文件中指定的workdir目录中
 
