@@ -3,7 +3,7 @@
 ## 主要提分点
 1、Mixup
 2、DCN与多尺度训练测试
-3、GC
+3、global context ROI
 4、旋转数据增强
 
 ## A榜验证消融实验结果
