@@ -32,7 +32,8 @@ class MixUp(object):
             mixup_image[:self.img2.shape[0], :self.img2.shape[1], :] += self.img2.astype('float32') * (1. - self.lambd)
             mixup_image = mixup_image.astype('uint8')
             mixup_boxes = np.vstack((boxes1, self.boxes2))
-            mixup_label = np.hstack((labels1,self.labels2))            results['img'] = mixup_image
+            mixup_label = np.hstack((labels1,self.labels2))            
+            results['img'] = mixup_image
             results['gt_bboxes'] = mixup_boxes
             results['gt_labels'] = mixup_label
         else: 
