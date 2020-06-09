@@ -1,10 +1,75 @@
 第一次打比赛还是很不容易，感谢队友[@milleniums](https://github.com/milleniums). 一起合作
-##主要提分点
+
+## 主要提分点
 1、Mixup
 2、DCN与多尺度训练测试
 3、GC
 4、旋转数据增强
-
+<table>
+    <tr>
+        <th>Backbone</th>
+        <th>DCN</th>
+        <th>MS</th>
+        <th>Mixup</th>
+        <th>RandomRotate90</th>
+        <th>GC</th>
+        <th>mAP</th>
+    </tr>
+    <tr>
+        <th>ResNet50-FPN</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th>baseline</th>
+    </tr>
+    <tr>
+        <th>ResNeXt101-FPN</th>
+        <th>&#10003;</th>
+        <th>&#10003;</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th>baseline+3.35%</th>
+    </tr>
+    <tr>
+        <th>ResNeXt101-FPN</th>
+        <th>&#10003;</th>
+        <th>&#10003;</th>
+        <th>&#10003;</th>
+        <th></th>
+        <th></th>
+        <th>baseline+4.25%</th>
+    </tr>  
+    <tr>
+        <th>ResNeXt101-FPN</th>
+        <th>&#10003;</th>
+        <th>&#10003;</th>
+        <th></th>
+        <th></th>
+        <th>&#10003;</th>
+        <th>baseline+4.36%</th>
+    </tr>
+    <tr>
+        <th>ResNeXt101-FPN</th>
+        <th>&#10003;</th>
+        <th>&#10003;</th>
+        <th></th>
+        <th>&#10003;</th>
+        <th>&#10003;</th>
+        <th>baseline+4.54%</th>
+    </tr>
+     <tr>
+        <th>ResNeXt101-FPN</th>
+        <th>&#10003;</th>
+        <th>&#10003;</th>
+        <th></th>
+        <th>&#10003;</th>
+        <th>&#10003;</th>
+        <th>baseline+4.69%</th>
+    </tr>   
+</table>
 ## 代码环境及依赖
 
 + OS: Ubuntu16.10
