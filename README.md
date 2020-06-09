@@ -6,7 +6,7 @@
 3、global context ROI
 4、旋转数据增强
 
-## A榜验证消融实验结果
+## A榜消融实验结果
 <table>
     <tr>
         <th>Backbone</th>
@@ -74,16 +74,7 @@
 </table>
 
 ## 代码环境及依赖
-
-+ OS: Ubuntu16.10
-+ GPU: 2080Ti * 4
-+ python: python3.7
-+ nvidia 依赖:
-   - cuda: 10.0.130
-   - cudnn: 7.5.1
-   - nvidia driver version: 430.14
-+ deeplearning 框架: pytorch1.1.0
-+ 其他依赖请参考requirement.txt
+参考requirement.txt
 
 - **预训练模型下载**
   - 下载mmdetection官方开源的htc的[resnext 64x4d 预训练模型](https://s3.ap-northeast-2.amazonaws.com/open-mmlab/mmdetection/models/htc/htc_dconv_c3-c5_mstrain_400_1400_x101_64x4d_fpn_20e_20190408-0e50669c.pth)
@@ -91,17 +82,13 @@
 ## 依赖安装及编译
 - **依赖安装编译**
 
-   1. 创建并激活虚拟环境
-        conda create -n underwater python=3.7 -y
-        conda activate underwater
-
-   2. 安装 pytorch
+   1. 安装 pytorch
         conda install pytorch=1.1.0 torchvision=0.3.0 cudatoolkit=10.0 -c pytorch
         
-   3. 安装其他依赖
+   2. 安装其他依赖
         pip install cython && pip --no-cache-dir install -r requirements.txt
    
-   4. 编译cuda op等：
+   3. 编译cuda op等：
         python setup.py develop
    
 
