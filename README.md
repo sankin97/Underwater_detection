@@ -102,9 +102,7 @@
 
         ./tools/dist_train.sh configs/underwater/cas_x101/cascade_rcnn_x101_64x4d_fpn_1x.py 4
         
-        (上面的4是我的gpu数量，请自行修改,另外根据config对应文件目录进行修改)
-
-   	2. 训练过程文件及最终权重文件均保存在config文件中指定的workdir目录中
+        (上面的4是gpu数量，请自行修改,另外根据config对应文件目录进行修改) 训练过程文件及最终权重文件均保存在config文件中指定的workdir目录中
 
    - **预测**
         
@@ -115,13 +113,13 @@
         ./tools/dist_test.sh configs/underwater/cas_x101/cascade_rcnn_x101_64x4d_fpn_1x.py workdirs/cas_x101_64x4d_fpn_htc_1x/latest.pth 4 --json_out results/cas_x101.json
 
 
-    2. 预测结果文件会保存在 /results 目录下
+    1. 预测结果文件会保存在 /results 目录下
 
-    3. 转化mmd预测结果为提交csv格式文件：
+    2. 转化mmd预测结果为提交csv格式文件：
        
        python tools/post_process/json2submit.py --test_json cas_x101.bbox.json --submit_file cas_x101.csv
 
        最终符合官方要求格式的提交文件cas_x101.csv 位于 submit目录下
 
 ## Reference
-[Baseline @zhengye](https://github.com/zhengye1995/underwater-objection-detection).
+[Baseline @郑烨](https://github.com/zhengye1995/underwater-objection-detection).
